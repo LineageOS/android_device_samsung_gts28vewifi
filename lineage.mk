@@ -7,7 +7,7 @@ PRODUCT_NAME := lineage_gts28vewifi
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_DEVICE := gts28vewifi
-PRODUCT_MODEL := SM-T813
+PRODUCT_MODEL := SM-T713
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
