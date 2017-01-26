@@ -1,4 +1,4 @@
-Device Tree for Samsung Galaxy Tab S2 9.7 (gts210vewifi)
+Device Tree for Samsung Galaxy Tab S2 8.0 (gts28vewifi)
 ===========================================
 
 Basic   | Spec Sheet
@@ -7,14 +7,14 @@ CPU     | Quad-core 1.4 GHz Cortex-A53 & Quad-core 1.8 GHz Cortex-A72
 Chipset | Qualcomm MSM8976 Snapdragon 652
 GPU     | Adreno 510
 Memory  | 3 GB RAM
-Shipped Android Version | 6.0.1
+Shipped Android Version | 5.0.2
 Storage | 32/64 GB
 MicroSD | Up to 256 GB
-Battery | Non-removable Li-Ion 5870 mAh battery
-Display | 1536 x 2048 pixels (~264 ppi pixel density)
+Battery | Non-removable Li-Ion 4000 mAh battery
+Display | 1536 x 2048 pixels (~320 ppi pixel density)
 Camera  | Primary: 8 MP
 	| Secondary: 2.1 MP
 
 Copyright 2017 - The LineageOS Project.
 
-![Samsung Galaxy Tab S2 9.7](http://cdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s2-97-2.jpg "Samsung Galaxy Tab S2 9.7")
+![Samsung Galaxy Tab S2 8.0](http://cdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-tab-s2-80-2.jpg "Samsung Galaxy Tab S2 8.0")
