@@ -980,22 +980,35 @@
     </path>
 
     <path name="ear">
-        <ctl name="Stereo DAC MIXL DAC R1 Switch" value="1"/>
-        <ctl name="Stereo DAC MIXR DAC L1 Switch" value="1"/>
+        <ctl name="Stereo DAC MIXL DAC L1 Switch" value="1"/>
+        <ctl name="Stereo DAC MIXR DAC R1 Switch" value="1"/>
         <ctl name="HPO L Playback Switch" value="1"/>
         <ctl name="HPO R Playback Switch" value="1"/>
         <ctl name="HP Switch" value="1" />
     </path>
 
     <path name="spk-ear">
-        <path name="spk" />
-        <path name="ear" />
+        <ctl name="Stereo DAC MIXL DAC L1 Switch" value="1"/>
+        <ctl name="Stereo DAC MIXR DAC R1 Switch" value="1"/>
+        <ctl name="DAC L2 Source" value="Stereo DAC Mixer"/>
+        <ctl name="DAC R2 Source" value="Stereo DAC Mixer"/>
+        <ctl name="SPK MIXL DAC L2 Switch" value="1"/>
+        <ctl name="SPK MIXR DAC R2 Switch" value="1"/>	
+        <ctl name="SPO L MIX SPKVOL L Switch" value="1"/>
+        <ctl name="SPO R MIX SPKVOL R Switch" value="1"/>
+        <ctl name="SPKVOL L Switch" value="1"/>
+        <ctl name="SPKVOL R Switch" value="1"/>
+        <ctl name="SPO Playback Switch" value="1"/>
+        <ctl name="SPK Switch" value="1" />
+        <ctl name="HPO L Playback Switch" value="1"/>
+        <ctl name="HPO R Playback Switch" value="1"/>
+        <ctl name="HP Switch" value="1" />
     </path>
 
     <!-- TX part -->
     <path name="main-mic">
-        <ctl name="RECMIX1L BST2 Switch" value="1"/>
-        <ctl name="RECMIX1R BST2 Switch" value="1"/>
+        <ctl name="RECMIX1L BST3 Switch" value="1"/>
+        <ctl name="RECMIX1R BST3 Switch" value="1"/>
         <ctl name="Stereo1 ADC Source" value="ADC1"/>
         <ctl name="Stereo1 ADC1 Source" value="ADC"/>
         <ctl name="Stereo1 ADC MIXL ADC1 Switch" value="1"/>
@@ -1004,8 +1017,8 @@
     </path>
 
     <path name="sub-mic">
-        <ctl name="RECMIX1L BST2 Switch" value="1"/>
-        <ctl name="RECMIX1R BST2 Switch" value="1"/>
+        <ctl name="RECMIX1L BST3 Switch" value="1"/>
+        <ctl name="RECMIX1R BST3 Switch" value="1"/>
         <ctl name="Stereo1 ADC Source" value="ADC1"/>
         <ctl name="Stereo1 ADC1 Source" value="ADC"/>
         <ctl name="Stereo1 ADC MIXL ADC1 Switch" value="1"/>
@@ -1079,13 +1092,13 @@
     <path name="headset">
         <path name="ear" />
             <ctl name="DAC1 Playback Volume" value="175"/>
-            <ctl name="Headphone Playback Volume" value="31"/>
+            <ctl name="Headphone Playback Volume" value="25"/>
     </path>
 
     <path name="speaker-and-headphones">
         <path name="spk-ear" />
             <ctl name="DAC1 Playback Volume" value="150"/>
-            <ctl name="Speaker Playback Volume" value="31"/>
+            <ctl name="Speaker Playback Volume" value="38"/>
             <ctl name="Headphone Playback Volume" value="7"/>			
     </path>
 
@@ -1126,19 +1139,19 @@
     <!-- Recording Scenario  -->
     <path name="rec-main-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="38"/>
+            <ctl name="IN3 Boost Volume" value="38"/>
             <ctl name="STO1 ADC Capture Volume" value="45"/>
     </path>
 
     <path name="rec-main-mic-jam">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="48"/>
+            <ctl name="IN3 Boost Volume" value="48"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="rec-sub-mic">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1156,31 +1169,31 @@
 
     <path name="rec-stereo-mic">
         <path name="sub-main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="rec-stereo-mic-jam">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="48"/>
+            <ctl name="IN3 Boost Volume" value="48"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="echo-stereo-mic">
         <path name="sub-main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="rec-high-gain-main-mic">
         <path name="rec-main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>		
     </path>
 
     <path name="rec-high-gain-sub-mic">
         <path name="rec-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>		
     </path>
 
@@ -1192,25 +1205,25 @@
 
     <path name="rec-high-gain-stereo-mic">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>	
     </path>
 
     <path name="rec-NS-mic-interview">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="rec-NS-mic-conversation">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="rec-NS-mic-conference">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
     <!-- end of Recording Scenario -->
@@ -1219,7 +1232,7 @@
     <!-- recognition Scenario -->
     <path name="vr-main-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="38"/>
+            <ctl name="IN3 Boost Volume" value="38"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1237,19 +1250,19 @@
 
     <path name="bargein1-main-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="bargein1-sub-mic">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="bargein1-earphone-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1261,19 +1274,19 @@
 
     <path name="bargein2-main-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="bargein2-sub-mic">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="bargein2-earphone-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1285,19 +1298,19 @@
 
     <path name="svoice-main-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="svoice-NS-mic">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>		
     </path>
 
     <path name="sdriving-NS-mic">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>		
     </path>
 
@@ -1363,31 +1376,31 @@
     <!-- TX part -->
     <path name="voice-call-main-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="40"/>
+            <ctl name="IN3 Boost Volume" value="40"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voice-call-main-mic-emergency">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voice-call-sub-mic">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voice-call-sub-mic-emergency">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voice-call-headphone-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="40"/>
+            <ctl name="IN3 Boost Volume" value="40"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1399,13 +1412,13 @@
 
     <path name="voice-call-NS-mic-handset">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voice-call-NS-mic-speaker">
         <path name="sub-main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
     <!-- end of Voice call Scenario  -->
@@ -1464,31 +1477,31 @@
     <!-- TX part -->
     <path name="voice-call-cp2-main-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voice-call-cp2-main-mic-emergency">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voice-call-cp2-sub-mic">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voice-call-cp2-sub-mic-emergency">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voice-call-cp2-headphone-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1500,13 +1513,13 @@
 
     <path name="voice-call-cp2-NS-mic-handset">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voice-call-cp2-NS-mic-speaker">
         <path name="sub-main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
     <!-- end of Voice call cp2 Scenario  -->
@@ -1521,7 +1534,7 @@
 
     <path name="voice-call-forward-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="0"/>
+            <ctl name="IN3 Boost Volume" value="0"/>
             <ctl name="STO1 ADC Capture Volume" value="0"/>
     </path>
     <!-- end of call forward Scenario -->
@@ -1562,19 +1575,19 @@
     <!-- TX part -->
     <path name="video-call-main-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="video-call-sub-mic">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="video-call-headphone-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1586,13 +1599,13 @@
 
     <path name="video-call-NS-mic-handset">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="video-call-NS-mic-speaker">
         <path name="sub-main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
     <!-- end of Video call Scenario  -->
@@ -1639,19 +1652,19 @@
     <!-- TX part -->
     <path name="VoLTE-voice-main-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="VoLTE-voice-sub-mic">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="VoLTE-voice-headphone-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1663,13 +1676,13 @@
 
     <path name="VoLTE-voice-NS-mic-handset">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="VoLTE-voice-NS-mic-speaker">
         <path name="sub-main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
     <!-- end of VoLTE Voice call Scenario  -->
@@ -1715,19 +1728,19 @@
     <!-- TX part -->
     <path name="VoLTE-voice-main-mic-wb">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="64"/>
+            <ctl name="IN3 Boost Volume" value="64"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="VoLTE-voice-sub-mic-wb">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="64"/>
+            <ctl name="IN3 Boost Volume" value="64"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="VoLTE-voice-headphone-mic-wb">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="64"/>
+            <ctl name="IN3 Boost Volume" value="64"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1739,13 +1752,13 @@
 
     <path name="VoLTE-voice-NS-mic-handset-wb">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="64"/>
+            <ctl name="IN3 Boost Volume" value="64"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="VoLTE-voice-NS-mic-speaker-wb">
         <path name="sub-main-mic" />
-            <ctl name="IN2 Boost Volume" value="64"/>
+            <ctl name="IN3 Boost Volume" value="64"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
     <!-- end of VoLTE Voice call Wide-band Scenario  -->
@@ -1786,13 +1799,13 @@
     <!-- TX part -->
     <path name="VoLTE-video-main-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="VoLTE-video-sub-mic">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1810,13 +1823,13 @@
 
     <path name="VoLTE-video-NS-mic-handset">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="VoLTE-video-NS-mic-speaker">
         <path name="sub-main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
     <!-- end of VoLTE Video call Scenario  -->
@@ -1856,13 +1869,13 @@
     <!-- TX part -->
     <path name="VoLTE-video-main-mic-wb">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="64"/>
+            <ctl name="IN3 Boost Volume" value="64"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="VoLTE-video-sub-mic-wb">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="64"/>
+            <ctl name="IN3 Boost Volume" value="64"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1880,13 +1893,13 @@
 
     <path name="VoLTE-video-NS-mic-handset-wb">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="64"/>
+            <ctl name="IN3 Boost Volume" value="64"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="VoLTE-video-NS-mic-speaker-wb">
         <path name="sub-main-mic" />
-            <ctl name="IN2 Boost Volume" value="64"/>
+            <ctl name="IN3 Boost Volume" value="64"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
     <!-- end of VoLTE Video call Wide-band Scenario  -->
@@ -1921,7 +1934,7 @@
     <!-- TX part -->
     <path name="TTY-vco-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -2070,7 +2083,7 @@
     <!-- TX part -->
     <path name="voip-main-mic-comm">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="47"/>
+            <ctl name="IN3 Boost Volume" value="47"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -2082,19 +2095,19 @@
 
     <path name="voip-headphone-mic-comm">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="47"/>
+            <ctl name="IN3 Boost Volume" value="47"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voip-headset-mic-comm">
         <path name="ear-mic" />
-            <ctl name="IN1 Boost Volume" value="16"/>
+            <ctl name="IN1 Boost Volume" value="31"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voip-main-mic-others">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -2106,7 +2119,7 @@
 
     <path name="voip-headphone-mic-others">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -2118,19 +2131,19 @@
 
     <path name="voip-main-mic-chaton">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voip-sub-mic-chaton">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voip-headphone-mic-chaton">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -2142,7 +2155,7 @@
 
     <path name="voip-main-mic-callforwarding">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="47"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -2154,31 +2167,31 @@
 
     <path name="voip-headphone-mic-callforwarding">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="47"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voip-headset-mic-callforwarding">
         <path name="ear-mic" />
-            <ctl name="IN1 Boost Volume" value="16"/>
+            <ctl name="IN1 Boost Volume" value="36"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voip-main-mic-webex">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voip-sub-mic-webex">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voip-headphone-mic-webex">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -2190,19 +2203,19 @@
 
     <path name="voip-main-mic-carrier">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voip-sub-mic-carrier">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voip-headphone-mic-carrier">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -2214,19 +2227,19 @@
 
     <path name="voip-main-mic-nonpcm">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voip-sub-mic-nonpcm">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="voip-headphone-mic-nonpcm">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -2291,31 +2304,31 @@
     <!-- TX part -->
     <path name="loopback-main-mic-DSP">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="34"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-main-mic-2mic-on-DSP">
         <path name="main-sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-sub-mic-DSP">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-3rd-mic-DSP">
         <path name="loopback-main-mic-DSP" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>		
     </path>
 
     <path name="loopback-headphone-mic-DSP">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -2333,37 +2346,37 @@
 
     <path name="loopback-main-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-main-mic-2mic-on">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-sub-mic">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-3rd-mic">
         <path name="3rd-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>		
     </path>
 
     <path name="loopback-headphone-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-headphone-sub-mic">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -2427,31 +2440,31 @@
     <!-- TX part -->
     <path name="loopback-cp2-main-mic-DSP">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-cp2-main-mic-2mic-on-DSP">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-cp2-sub-mic-DSP">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-cp2-3rd-mic-DSP">
         <path name="loopback-main-mic-DSP" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>		
     </path>
 
     <path name="loopback-cp2-headphone-mic-DSP">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -2463,31 +2476,31 @@
 
     <path name="loopback-cp2-main-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-cp2-main-mic-2mic-on">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-cp2-sub-mic">
         <path name="sub-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
     <path name="loopback-cp2-3rd-mic">
         <path name="3rd-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>		
     </path>
 
     <path name="loopback-cp2-headphone-mic">
         <path name="main-mic" />
-            <ctl name="IN2 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
