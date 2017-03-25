@@ -13,6 +13,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 # Use the latest approved GMS identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=gts28vewifixx \
-    BUILD_FINGERPRINT=samsung/gts28vewifixx/gts28vewifi:6.0.1/MMB29M/T813XXU2APK6:user/release-keys \
-    PRIVATE_BUILD_DESC="gts28vewifixx-user 6.0.1 MMB29M T813XXU2APK6 release-keys"
+    PRODUCT_NAME=gts28vewifizh \
+    BUILD_FINGERPRINT=samsung/gts28vewifizs/gts28vewifi:6.0.1/MMB29M/T713ZSU2AQA1:user/release-keys \
+    PRIVATE_BUILD_DESC="gts28vewifizs-user 6.0.1 MMB29M T713ZSU2AQA1 release-keys"
