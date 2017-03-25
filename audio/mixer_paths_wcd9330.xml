@@ -1145,7 +1145,7 @@
 
     <path name="rec-main-mic-jam">
         <path name="main-mic" />
-            <ctl name="IN3 Boost Volume" value="48"/>
+            <ctl name="IN3 Boost Volume" value="38"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1175,7 +1175,7 @@
 
     <path name="rec-stereo-mic-jam">
         <path name="main-mic" />
-            <ctl name="IN3 Boost Volume" value="48"/>
+            <ctl name="IN3 Boost Volume" value="16"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
