@@ -291,6 +291,11 @@
         <path name="deep-buffer-playback" />
     </path>
 
+    <path name="deep-buffer-playback speaker-and-bt-sco-wb">
+        <path name="deep-buffer-playback bt-sco-wb" />
+        <path name="deep-buffer-playback" />
+    </path>
+	
     <path name="low-latency-playback">
         <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia5" value="1" />
     </path>
@@ -337,7 +342,12 @@
         <path name="low-latency-playback bt-sco" />
         <path name="low-latency-playback" />
     </path>
-
+	
+    <path name="low-latency-playback speaker-and-bt-sco-wb">
+        <path name="low-latency-playback bt-sco-wb" />
+        <path name="low-latency-playback" />
+    </path>
+	
     <path name="jam-framework-playback">
         <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia17" value="1" />
     </path>
@@ -1114,7 +1124,13 @@
             <ctl name="DAC1 Playback Volume" value="175"/>
             <ctl name="Speaker Playback Volume" value="31"/>			
     </path>
-
+	
+    <path name="speaker-and-bt-sco-wb">
+        <path name="spk" />
+            <ctl name="DAC1 Playback Volume" value="175"/>
+            <ctl name="Speaker Playback Volume" value="31"/>			
+    </path>
+    
     <path name="speaker-and-proxy">
         <path name="spk" />
             <ctl name="DAC1 Playback Volume" value="175"/>
@@ -1145,7 +1161,7 @@
 
     <path name="rec-main-mic-jam">
         <path name="main-mic" />
-            <ctl name="IN3 Boost Volume" value="38"/>
+            <ctl name="IN3 Boost Volume" value="48"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
@@ -1175,7 +1191,7 @@
 
     <path name="rec-stereo-mic-jam">
         <path name="main-mic" />
-            <ctl name="IN3 Boost Volume" value="16"/>
+            <ctl name="IN3 Boost Volume" value="48"/>
             <ctl name="STO1 ADC Capture Volume" value="47"/>
     </path>
 
