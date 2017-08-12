@@ -1,1 +1,1 @@
-require version-bootloader=T713XXU2BQCO|T713XXU2BQD3
+require version-bootloader=T713XXU2BQCO|T713XXU2BQD3|T713XXU2BQG2
