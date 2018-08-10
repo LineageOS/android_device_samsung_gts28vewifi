@@ -21,9 +21,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 # Inherit from gts28vewifi device
 $(call inherit-product, device/samsung/gts28vewifi/device.mk)
 
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := gts28vewifi
-PRODUCT_NAME := full_gts28vewifi
+PRODUCT_NAME := lineage_gts28vewifi
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := gts28vewifi
+PRODUCT_MODEL := SM-T713
 PRODUCT_MANUFACTURER := samsung
+
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# Use the latest approved GMS identifiers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=gts28vewifixx \
+    PRIVATE_BUILD_DESC="gts28vewifixx-user 7.0 NRD90M T713XXU2BRB2 release-keys"
+
+BUILD_FINGERPRINT := "samsung/gts28vewifixx/gts28vewifi:7.0/NRD90M/T713XXU2BRB2:user/release-keys"
