@@ -1,3 +1,5 @@
+# Samsung Package Version: T713XXS2BSG1_T713PHN2BSB1_PHN, unless pinned
+
 # Sensors
 lib64/hw/sensors.msm8952.so
 vendor/etc/yas_set.cfg
